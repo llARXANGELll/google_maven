@@ -11,28 +11,34 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class YandexTest {
 
+    public WebDriver webDriver;
 //    public WebDriver webDriver = new ChromeDriver();
 //    @BeforeTest
 //    public void driverLaunch(){
 //        System.getProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
 //    }
+@Test
+    public void driver(){
+        WebDriver webDriver = new ChromeDriver();
+        WebElement input = webDriver.findElement(By.name("text"));
+    }
 
-    WebDriver webDriver = new ChromeDriver();
     @Test
     public void yandexx() {
+
         System.getProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
-        webDriver.get("https://yandex.ru");
+        WebDriver webDriver = new ChromeDriver();
         WebElement input = webDriver.findElement(By.name("text"));
         input.sendKeys("руддщ цкщдв",Keys.ENTER);
-
-
-
-    }
-
-    @After
-    public void driverOut(){
         webDriver.quit();
+
+
+    }
+
+//    @After
+//    public void driverOut(){
+
     }
 
 
-}
+
